@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "Gmail List Mailer",
+  "version": "1.0.0",
+  "description": "Upload a CSV of contacts and send each one a templated email through Gmail compose.",
+  "action": {
+    "default_title": "Open List Mailer in Gmail"
+  },
+  "permissions": [
+    "storage",
+    "unlimitedStorage",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://mail.google.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://mail.google.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "dashboard.html",
+        "data/history.json"
+      ],
+      "matches": [
+        "https://mail.google.com/*"
+      ]
+    }
+  ]
+}
