@@ -183,4 +183,4 @@ At that level and frequency the tone is inaudible in normal use, but the tab doe
 - Auto-send depends on matching Gmail's DOM (Compose button, To/Subject/Body fields, Send button). If Google reshuffles their markup this can break — the extension reports an error rather than silently doing nothing, and review mode is the safe fallback.
 - Sending hundreds of near-identical cold emails from a personal Gmail account is a good way to get it rate-limited or flagged. Keep the delay at a few seconds, start with a small batch, and make sure your template is something a human would actually want to receive.
 #   g m a i l - e x t e n s i o n  
- 
+ "# gmail-extension" 
