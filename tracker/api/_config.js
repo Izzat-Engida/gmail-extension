@@ -6,7 +6,7 @@ export const DATABASE_URL = process.env.DATABASE_URL || "";
 export function allowCors(res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, X-Write-Key, X-Dashboard-Key");
-  res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, DELETE, OPTIONS");
 }
 
 export function authorized(req, expected, header) {
