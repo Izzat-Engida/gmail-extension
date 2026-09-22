@@ -14,8 +14,8 @@ const BRAND = {
 // Set baseUrl and writeKey after deploying tracker/. Leave baseUrl empty while
 // testing locally; emails will then be sent without a tracking pixel.
 const TRACKING = {
-  baseUrl: "",
-  writeKey: "change-this-write-key",
+  baseUrl: "https://tracker-roan-xi.vercel.app",
+  writeKey: "5fe3df4eadef0b06664e4e090eb8850a3711ca7b8ff9b34e87467242e20ac9a7",
 };
 
 function createTrackingId() {
