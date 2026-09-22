@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Zemenay Email Tracker</title>
+  <style>
+    body { margin:0; padding:32px; background:#f5f7fb; color:#172033; font:15px system-ui,sans-serif }
+    main { max-width:1100px; margin:auto } h1 { margin-top:0 }
+    .bar,.card { background:white; border:1px solid #e2e7f0; border-radius:12px; padding:18px; margin:16px 0 }
+    .tiles { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px }
+    .tile { background:#f1f5ff; border-radius:10px; padding:16px }.value { font-size:28px; font-weight:700 }.label { color:#65708a; margin-top:4px }
+    input,button { font:inherit; padding:9px 11px; border:1px solid #ccd4e2; border-radius:7px } button { cursor:pointer; background:#1d4ed8; color:white; border:0 }
+    .scroll { overflow:auto } table { width:100%; border-collapse:collapse; white-space:nowrap } th,td { text-align:left; padding:10px; border-bottom:1px solid #edf0f5 } .yes { color:#16803c } .muted { color:#778197 }
+  </style>
+</head>
+<body><main>
+  <h1>Zemenay Email Tracker</h1>
+  <div class="bar">
+    <input id="key" type="password" placeholder="Dashboard key">
+    <button id="load">Load statistics</button>
+    <span id="status" class="muted"></span>
+  </div>
+  <section id="tiles" class="tiles"></section>
+  <div class="card scroll"><table><thead><tr><th>Recipient</th><th>Company</th><th>Segment</th><th>Sent</th><th>Opened</th><th>Opens</th></tr></thead><tbody id="rows"></tbody></table></div>
+</main><script src="./app.js"></script></body>
+</html>
